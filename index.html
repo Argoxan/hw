@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sorting</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                 
+    <link rel="stylesheet" href="css/magnific-popup.css">                                
+    <link rel="stylesheet" href="css/main.css">                                   
+
+
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <h1 class="tm-site-name">Sorting</h1>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#welcome" class="tm-nav-item-link">Welcome</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">About</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#galleryone" class="tm-nav-item-link">Bubble Sort</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#secondgallery" class="tm-nav-item-link">Selection Sort</a>
+                                </li>
+                                 <li class="tm-nav-item">
+                                    <a href="#thirdgallery" class="tm-nav-item-link">Insertion Sort</a>
+                                </li>
+
+                            </ul>
+                        </nav>                                         
+                    </div> 
+                    
+                
+                    <div class="tm-right-column">
+                        <figure>
+                            <img onmouseover="smallImg(this)" onmouseout="normalImg(this)" src="img/Landing_image.png" alt="Header image" class="img-fluid">    
+                        </figure>
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Welcome to Sorting Algorithms</h2>
+                                </header>
+                                <p>This website explains and demonstrates how some popular Sorting Algorithms work.</p>
+                                <p>I'm glad to use you here.</p>
+
+                            </section>
+                            <!-- About section -->
+                            <section id="about" class="tm-section">
+                                <div class="row">                                                                
+                                    <div class="col-lg-6">
+                                        <header>
+                                            <h2 class="tm-blue-text tm-section-title tm-margin-b-45">About the project</h2>
+                                        </header>
+                                            <p>A Sorting Algorithm is used to rearrange a given array or list elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of element in the respective data structure.</p>
+                                    </div>
+
+                                </div>                            
+                            </section>  
+
+                            <!-- Gallery One section -->     
+                            <section id="galleryone" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Bubble Sort</h2></header>
+                                <div class="tm-gallery-container tm-gallery-1">
+                            
+
+                                            <canvas id="canvas-bubble-sort" width="300px" height="300px" class="box-canvas"></canvas>
+                                        <div class="col-lg-6">
+                                        <p class="container">
+                                                    Bubble sort is a simple sorting algorithm. The algorithm starts at the beginning of the data set. It compares the first two elements, and if the first is greater than the second, it swaps them. It continues doing this for each pair of adjacent elements to the end of the data set. It then starts again with the first two elements, repeating until no swaps have occurred on the last pass. This algorithm's average and worst case performance is O(n2), so it is rarely used to sort large, unordered, data sets.
+                                                </p>
+                                            <input type="button" value="Run Demo" id="btnBubbleSort">
+                                            
+                                            <button onclick="play()">PLAY MY AUDIO</button>
+                                            
+                                        </div>
+       
+                                                           
+                                </div>
+                            </section>
+
+                               
+                            <section id="secondgallery" class="tm-section">
+                                <header id="test"><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Selection sort</h2></header>
+                                <div class="tm-gallery-container tm-gallery-2">
+                                    
+                                    <canvas id="canvas-selection-sort" width="300px" height="300px" class="box-canvas"></canvas>
+                                                <div class="col-lg-6">                                                           
+                                                <p>
+                                                    Insertion sort is a simple sorting algorithm that is relatively efficient for small lists and mostly sorted lists, and often is used as part of more sophisticated algorithms. It works by taking elements from the list one by one and inserting them in their correct position into a new sorted list. In arrays, the new list and the remaining elements can share the array's space, but insertion is expensive, requiring shifting all following elements over by one. Shell sort is a variant of insertion sort that is more efficient for larger lists.
+                                                </p>
+                                                <input type="button" value="Run Demo" id="btnSelectionSort">
+                                                </div>
+                                </div>
+                                
+                            </section>
+                            
+                            <section id="thirdgallery" class="tm-section">
+                                <header><h2 class="tm-blue-text tm-section-title tm-margin-b-30">Insertion sort</h2></header>
+                                <div class="tm-gallery-container tm-gallery-2">
+                                    
+                                    <canvas id="canvas-insert-sort" width="300px" height="300px" class="box-canvas"></canvas>
+                                                <div class="col-lg-6">                                                           
+                                                <p>
+                                                    Selection sort is an in-place comparison sort. It has O(n2) complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and also has performance advantages over more complicated algorithms in certain situations. The algorithm finds the minimum value, swaps it with the value in the first position, and repeats these steps for the remainder of the list. It does no more than n swaps, and thus is useful where swapping is very expensive.
+                                                </p>
+                                                <input type="button" value="Run Demo" id="btnInsertionSort">
+                                                </div>
+                                </div>
+                                
+                            </section>
+
+                        </div>  
+                        
+                    </div>
+                </div>
+            </div> 
+        </div> 
+                
+
+        <script src="js/jquery-1.11.3.min.js"></script>           
+        <script src="js/jquery.singlePageNav.min.js"></script>  
+        
+            <script>
+	
+                var sort = function(canvasId, strokeStyle, canvasSize){
+                    this.canvasId 		= canvasId;
+                    this.arraySize 		= canvasSize;
+                    this.canvasWidth 	= canvasSize;
+                    this.canvasHeight 	= canvasSize;
+
+                    if(!document.getElementById(canvasId)){
+                        alert('Canvas not found: ' + canvasId);
+                        return;
+                    }
+                    this.canvas = document.getElementById(canvasId);
+                    this.canvas.width 	= this.canvasWidth;
+                    this.canvas.height 	= this.canvasHeight;
+
+                    if(!this.canvas.getContext){
+                        alert('Canvas not supported!');
+                        return;
+                    }
+                    this.context = this.canvas.getContext("2d");
+                    this.context.lineWidth 		= 1;
+                    this.context.strokeStyle 	= strokeStyle;
+
+                    //initialize our array of values
+                    this.values = this.getValues(this.arraySize);
+                }
+
+                //initialize an array of N numbers
+                sort.prototype.getValues = function(numElements){
+                    for (var a=[],i=0;i<numElements;++i) a[i]=i;
+                    return this.shuffle(a);	
+                }
+
+                //randomize the values in the array
+                sort.prototype.shuffle = function(array){
+                    var tmp, current, top = array.length;
+                    if(top) while(--top) {
+                        current = Math.floor(Math.random() * (top + 1));
+                        tmp = array[current];
+                        array[current] = array[top];
+                        array[top] = tmp;
+                    }
+                    return array;
+                }
+
+                //this function renders each value as a line
+                //we use the magnitude of the value at element N is used as the length of the line
+                //we use the index as the position of the line (all lines are veritcal)
+                sort.prototype.draw = function(){
+                    //clear canvas
+                    this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+
+                    //draw each of the values as a line 
+                    for (var i = 0; i < this.values.length; i++) {
+                        this.context.beginPath();
+                        this.context.moveTo(0, i+0.5);
+                        this.context.lineTo(this.values[i], i+0.5);
+                        this.context.stroke();
+                    }
+                }
+
+                //sort the array of values, and each time a swap occurs, redraw the values on the canvas
+                //sort using a BUBBLE SORT algorithm
+                sort.prototype.bubbleSort = function(){
+                    var swapped = false;
+
+                    //pass through the array and swap the first unordered value you find with its neighbour
+                    sort.prototype.bubbleSortPass = function(i){
+                        if (this.values[i] > this.values[i+1]) {
+                            var temp 			= this.values[i];
+                            this.values[i] 		= this.values[i+1];
+                            this.values[i+1] 	= temp;
+
+                            swapped = true;
+
+                            this.draw();
+                        }				
+
+                        //save the context so that we can call the functions with setTimeout in the context of our object
+                        var self = this;
+
+                        //These are our "loop" conditionals
+                        if(i<this.values.length){
+                            //if i<this.values.length, we are not yet at the end of our pass through the array (inner loop)
+                            setTimeout(function(){self.bubbleSortPass(i+1);}, 5);
+                        }else{
+                            //if i=this.values.length then we have completed a pass through the array
+                            //we check if any values were swapped during the last pass
+                            //if no, the array is sorted
+                            //if yes, then we need to do another pass
+                            if(swapped){setTimeout(function(){self.bubbleSort();}, 5);}
+                        }				
+                    }
+
+                    this.bubbleSortPass(0);
+                }
+
+                //sort the array of values, and each time a swap occurs, redraw the values on the canvas
+                //sort using a SELECTION SORT algorithm
+                sort.prototype.selectionSort = function(i){
+                    // current smallest value in the array
+                    var smallestValueIndex = i;
+
+                    // check against all other values
+                    for (var k = i+1; k < this.arraySize; k++) {
+
+                        // new small value, reference its position
+                        if (compare( this.values[k], this.values[smallestValueIndex]) === true) {
+                            smallestValueIndex = k;
+                        }
+                    }
+
+                    // a new smallest value was assigned, perform a swap !
+                    if (smallestValueIndex !== i) {
+                        var tmp 		= this.values[i];
+                        this.values[i] 	= this.values[smallestValueIndex];
+                        this.values[smallestValueIndex] = tmp;
+
+                        this.draw();
+                    }
+
+                    function compare(a, b) {
+                        return a < b ? true : b;
+                    }
+
+                    var self = this;
+                    if(i<this.arraySize){setTimeout(function(){self.selectionSort(i+1);}, 5);}	
+                }
+
+                //sort the array of values, and each time a swap occurs, redraw the values on the canvas
+                //fort using an INSERTION SORT algorithm
+                sort.prototype.insertionSort = function(){
+                    var len = this.values.length, i = -1, j, tmp;
+
+                    while (len--) {
+                        tmp = this.values[++i];
+                        j = i;
+
+                        sort.prototype.insertionSortPass = function(j){
+                            if(this.values[j]>tmp && j>=0){
+                                this.values[j + 1] = this.values[j];
+                                this.values[j] = tmp;
+
+                                this.draw();
+
+                                var self = this;
+
+                                //totally fucked - why doesn't this work???
+                                //setTimeout(function(){self.insertionSortPass(j-1);},200);
+
+                                //works, but UI is locked until the thread exits
+                                self.insertionSortPass(j-1);
+                            }
+                        }
+                        this.insertionSortPass(j-1);
+                    }
+                }
+    
+       
+            $(document).ready(function(){
+                
+                var bubSort = new sort('canvas-bubble-sort','rgb(255,0,0)', 200);
+                    bubSort.draw();
+
+                    var selSort = new sort('canvas-selection-sort','rgb(0,255,0)', 200);
+                    selSort.draw();
+
+                    var insSort = new sort('canvas-insert-sort', 'rgb(0,0,255)', 200);
+                    insSort.draw();
+                
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+
+                    $("#btnBubbleSort").click(function(){
+                        bubSort.bubbleSort();
+                    });
+
+                    $("#btnSelectionSort").click(function(){
+                        selSort.selectionSort(0);
+                    });	
+
+                    $("#btnInsertionSort").click(function(){
+                        insSort.insertionSort();
+                    });
+            });
+                
+                function play() {
+                                  var audio = new Audio('https://audio-previews.elements.envatousercontent.com/files/315393374/preview.mp3?response-content-disposition=attachment%3B+filename%3D%22PWXGTB4-godzilla-roar.mp3%22');
+                                  audio.play();
+                                }
+                
+                function smallImg(x) {
+                  x.style.height = "1000px";
+                  x.style.width = "500px";
+                }
+
+                function normalImg(x) {
+                  x.style.height = "750px";
+                  x.style.width = "1300px";
+                }
+        </script>             
+</body>
+</html>
